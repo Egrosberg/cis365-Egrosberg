@@ -13,16 +13,16 @@
    <legend>Advanced Art Work Search</legend>
    
     <div id="searchBox">
-      <input type="text" placeholder="Search">
+      <input type="text" name="Search" placeholder="Search">
       <textbox>Subject</textbox>
-      <input type="radio" name="Type" value="1">History
-      <input type="radio" name="Type" value="2">Person
-      <input type="radio" name="Type" value="3">Landscape
-      <select name="Select Genre">
+      <input type="radio" name="Subject" value="History">History
+      <input type="radio" name="Subject" value="Person">Person
+      <input type="radio" name="Subject" value="Landscape">Landscape
+      <select name="Genre">
          <option value="" disabled selected hidden>Select Genre</option>
-         <option>Baroque</option>
-         <option>Renaissance</option>
-         <option>Realism</option>
+         <option name="Genre" value="Baroque">Baroque</option>
+         <option name="Genre" value="Renaissance">Renaissance</option>
+         <option name="Genre" value="Realism">Realism</option>
 
       </select>
       <button>Filter</button>
@@ -32,10 +32,10 @@
     <div id="settingsBox">
       <select name="Bulk Actions">
          <option value="" disabled selected hidden>Bulk Actions</option>
-         <option value="0">Archive</option>
-         <option value="1">Edit</option>
-         <option value="2">Delete</option>
-         <option value="3">Collection</option>
+         <option name="Action" value="0">Archive</option>
+         <option name="Action" value="1">Edit</option>
+         <option name="Action" value="2">Delete</option>
+         <option name="Action" value="3">Collection</option>
       </select>
       <button>Apply To All</button>
 
@@ -68,7 +68,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="checkbox" name "index[]" value="10" /></td>
+        <td><input type="checkbox" name="Index[]" value="1" /></td>
         <td><img src="125020.jpg" class="thumb"></td>
         <td>Portrait of Alida Christina Assink</td>
         <td>Kruseman, Jan</td>
@@ -80,7 +80,7 @@
       </tr>
 
       <tr>
-         <td><input type="checkbox" name "index[]" value="10" /></td>
+         <td><input type="checkbox" name="Index[]" value="2" /></td>
          <td><img src="125020.jpg" class="thumb"></td>
          <td>Portrait of William II, King of the Netherlands</td>
          <td>Kruseman, Jan</td>
@@ -91,7 +91,7 @@
          <td> <button type="button" class="otherBtns"> <img src= "delete.png"/></button ></td>
       </tr>
       <tr>
-         <td><input type="checkbox" name "index[]" value="10" /></td>
+         <td><input type="checkbox" name="Index[]" value="3" /></td>
          <td><img src="127010.jpg" class = "thumb"></td>
          <td>Three girls from the Amsterdam Orphanage</td>
          <td>Schwartze, Thérèse</td>
@@ -103,7 +103,7 @@
 
       </tr>
       <tr>
-         <td><input type="checkbox" name "index[]" value="10" /></td>
+         <td><input type="checkbox" name ="Index[]" value="4" /></td>
          <td><img src="128010.jpg"class="thumb"></td>
          <td>The Windmill at Wijk bij Duurstede</td>
         <td>Ruisdael, Jacob van</td>
@@ -114,7 +114,7 @@
          <td> <button type="button" class="otherBtns"> <img src= "delete.png"/></button ></td>
       </tr>
       <tr>
-         <td><input type="checkbox" name "index[]" value="10" /></td>
+         <td><input type="checkbox" name= "Index[]" value="5" /></td>
          <td><img src="130020.jpg"class="thumb"></td>
          <td>Morning Ride Along the Beach</td>
         <td>Mauve, Anton</td>
