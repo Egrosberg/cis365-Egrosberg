@@ -117,14 +117,14 @@ img {
     box-shadow: 3px 3px 8px hsl(0,0%, 70%)
 }
 
-.card-button {
+.card-actions {
     opacity: 0;
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease-out;
 }
 
-.card-button:hover{
+.card-actions:hover{
     opacity: 1;
     transition: opacity .1second;
 }
