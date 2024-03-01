@@ -8,7 +8,8 @@ let tip = iBill*TIP_PERCENTAGE;
 
 // console.log(`For bill of $${bill} the tip should be $${tip}`);
 
-if (iBill && iBill !=0)
+if (iBill!=undefined && iBill !=0)//truthy/falsy
+// if(iBill>0)
 {
     console.log(`For bill of $${bill} the tip should be $${tip}`);
 }
