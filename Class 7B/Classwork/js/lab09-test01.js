@@ -5,8 +5,7 @@
 // console.log(document.getElementsByClassName("thumbs"));
 
 document.getElementById('thumb-list').style.border = "solid 1px #CCCCCC";
-// console.log(document.getElementById('thumb-list'));
-// document.getElementById('thumb-list').style.display = 'none';
+
 
 document.querySelector('#msg').value=document.querySelector('.box fieldset p').textContent;
 
