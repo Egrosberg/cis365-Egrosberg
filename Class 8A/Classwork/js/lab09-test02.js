@@ -6,13 +6,24 @@ const parent = document.querySelector('#parent');
 for (let ph of photos) {
    let figure = document.createElement('figure');
 
-   figure.appendChild( createImage(ph) );
-   figure.appendChild( createCaption(ph) );
-
+   figure.appendChild(createImage(ph));
+   figure.appendChild(createCaption(ph));
    parent.appendChild(figure);
+   parent.appendChild(createButton());
+   console.log("created button");
 }
 
 //create image and set its attributes.
+function createImage(photo){
+   let image = document.createElement('img');    //created <img> tag
+   image.setAttribute('src', `images/${photo.filename}`);
+   image.setAttribute('alt', `${photo.title}`);
+   console.log("got to image method");
+   // image.setAttribute('src', 'images/'+photo.filename);
+   // image.setAttribute('alt', 'images/'+photo.title);
+   return image;
+
+}
 
 function createCaption(photo) {
    let caption = document.createElement('figcaption');
@@ -43,7 +54,33 @@ function createParagraph(photo) {
    let p = document.createElement('p');
    let pText = document.createTextNode(photo.description);
    p.appendChild(pText);
+   p.insertAdjacentText('beforeend', 'HERE IS SOME EXTRA CODE');
    return p;
 }
 
-//add event logic
+function createButton(){
+   let b = document.createElement('button');
+   b.textContent = "Click Me";
+   b.id = "btn";
+   return b;
+}
+
+//add DOM content load event here
+document.addEventListener('DOMContentLoaded', function(){
+   //add event logic
+   const btn = document.getElementsByTagName("button");
+   //console.log(btn);
+   btn[0].addEventListener("click", function(){
+      console.log("used an anonymous function");
+   });
+
+   //Version 2
+   document.querySelector("button").addEventListener("click", function(e)
+   {
+      console.log(e.target.textContent);
+      console.log(e);
+      console.log("a different approach but same result");
+   });
+
+});
+
