@@ -70,17 +70,32 @@ document.addEventListener('DOMContentLoaded', function(){
    //add event logic
    const btn = document.getElementsByTagName("button");
    //console.log(btn);
-   btn[0].addEventListener("click", function(){
-      console.log("used an anonymous function");
-   });
+   btn[0].addEventListener("click", function(){ 
+      console.log("used an anonymous function"); });
 
    //Version 2
    document.querySelector("button").addEventListener("click", function(e)
    {
+      e.stopPropagation();
       console.log(e.target.textContent);
       console.log(e);
       console.log("a different approach but same result");
    });
 
+   function logParent(e){
+      console.log("the parent was clicked");
+      console.log(e.target);
+
+      if(e.target && e.target.nodName == "IMG"){
+         console.log("The image was clicked");
+         console.log(e.target);
+      }
+   }
+   document.getElementById("parent").addEventListener("click", logParent);
+
+   document.querySelector("#parent").addEventListener("click", function (e) {
+
+   
+   })
 });
 
