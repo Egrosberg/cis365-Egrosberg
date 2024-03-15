@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
       console.log("the parent was clicked");
       console.log(e.target);
 
-      if(e.target && e.target.nodName == "IMG"){
+      if(e.target && e.target.nodeName == "IMG"){
          console.log("The image was clicked");
          console.log(e.target);
       }
